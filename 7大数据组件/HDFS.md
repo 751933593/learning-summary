@@ -1,4 +1,5 @@
-## HDFS简介
+
+## HDFS
 
 > HDFS（Hadoop Distributed File System）
 
@@ -57,7 +58,7 @@
 
   负责数据的存储和读取，并定期向名称节点发送自己所存储块的列表
 
-![SecondNameNode工作流程](img\HDFS\SecondNameNode工作流程.png)
+![SecondNameNode工作流程](..\img\HDFS\SecondNameNode工作流程.png)
 
 ### HDFS的局限性
 

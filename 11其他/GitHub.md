@@ -91,6 +91,8 @@ git diff HEAD [版本号] file1
 git branch -v
 # 创建分支
 git branch branch_01
+# 删除本地分支
+git branch -D branch_01
 # 切换分支
 git checkout branch_01
 # 合并分支
@@ -110,11 +112,11 @@ git checkout branch_01
 
 ##### 4.1 版本的内部构造
 
-![](img\GitHub\Git版本的内部构造.jpg)
+![](..\img\GitHub\Git版本的内部构造.jpg)
 
 ##### 4.2 分支管理机制
 
-![](img\GitHub\Git分支管理机制.jpg)
+![](..\img\GitHub\Git分支管理机制.jpg)
 
 - 分支和HEAD是指针
 
@@ -155,7 +157,7 @@ git clone 远程库某个仓库的克隆地址
 
 ##### 5.4 跨团队协作
 
-![](img\GitHub\Git项目跨团队协作开发.jpg)
+![](..\img\GitHub\Git项目跨团队协作开发.jpg)
 
 ##### 5.5 SSH免密登录
 
@@ -184,11 +186,11 @@ git push 远程库别名 远程库分支名
 
 大家都向远程仓库的master分支执行push/pull操作，唯一和SVN不同的是每个人都有本地仓库
 
-![](img\GitHub\集中式工作流.jpg)
+![](..\img\GitHub\集中式工作流.jpg)
 
 ##### 6.2 GitFlow工作流
 
-![](img\GitHub\GitFlow工作流.jpg)
+![](..\img\GitHub\GitFlow工作流.jpg)
 
 ##### 6.3 Forking工作流
 

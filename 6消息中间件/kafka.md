@@ -52,7 +52,7 @@ kafka是分布式消息队列。producer生产数据后按照topic归类放入ka
 
 #### 3. 基本架构图
 
-![](img\kafka\kafka基本架构图.jpg)
+![](..\img\kafka\kafka基本架构图.jpg)
 
 - kafka集群是依赖zookeeper的
 - borker是kafka集群的单个实例
@@ -277,12 +277,12 @@ kafka是分布式消息队列。producer生产数据后按照topic归类放入ka
 
   - replica恢复
 
-    ![](img\kafka\replica恢复.png)
+    ![](..\img\kafka\replica恢复.png)
 
     BrokerA恢复时，先将数据truncate到m1，然后去leader catch up数据，最后加入到ISR中。
-
+    
     但由于m3没有提交成功，此时m3数据的提交会retry3次，如果都没有成功，做其他处理（做更长时间的retry或持久化到其他地方），如果其中B选为leader，m3会发送至B
-
+    
     因此，**kafka保证的数据顺序性，是提交后数据的顺序性**
 
   - 如何处理ISR中所有的replica都宕机？
@@ -338,7 +338,7 @@ kafka是分布式消息队列。producer生产数据后按照topic归类放入ka
 
 - **在zookeeper存储位置**：/brokers  /consumer
 
-  ![](img\kafka\zookeeper存储kafka元数据.png)
+  ![](..\img\kafka\zookeeper存储kafka元数据.png)
 
 ##### 6.3消费数据
 

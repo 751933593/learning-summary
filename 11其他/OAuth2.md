@@ -15,7 +15,7 @@ OAuth2是一个开放授权标准，允许用户让第三方应用访问，通�
 
 OAuth工作流程：
 
-![OAuth工作流程](img\OAuth2\1560929469(1).jpg)
+![OAuth工作流程](..\img\OAuth2\1560929469(1).jpg)
 
 ### 3.OAuth2四种授权许可
 
@@ -39,7 +39,7 @@ Authorization Server的请求参数：
 
 示例：
 
-![](C:\Users\liurunze\Desktop\知识点\img\OAuth2\1561022536(1).jpg)
+![](..\img\OAuth2\1561022536(1).jpg)
 
 （2）**Authorization server**验证**Client**在（A）中传递的参数信息，如果无误则提供一个页面供**Resource owner**登陆，登陆成功后选择**Client**可以访问**Resource server**的哪些资源以及读写权限。无误后返回一个**授权码（Authorization Code）**给Client。
 
@@ -50,7 +50,7 @@ Authorization Server的响应信息：
 
 示例：
 
-![](C:\Users\liurunze\Desktop\知识点\img\OAuth2\1561022693(1).jpg)
+![](..\img\OAuth2\1561022693(1).jpg)
 
 （3）**Client**拿着（C）中获得的**授权码（Authorization Code）**和（客户端标识、重定向URL等信息）作为参数，请求**Authorization server**提供的获取访问令牌的URL。
 
@@ -63,7 +63,7 @@ Access Token Request：
 
 示例：
 
-![](C:\Users\liurunze\Desktop\知识点\img\OAuth2\1561023033(1).jpg)
+![](..\img\OAuth2\1561023033(1).jpg)
 
 （4）**Authorization server**返回**访问令牌**和可选的**刷新令牌**以及**令牌有效时间**等信息给**Client**。
 
@@ -75,13 +75,13 @@ Access Token Response：
 
 示例：
 
-![](C:\Users\liurunze\Desktop\知识点\img\OAuth2\1561023109(1).jpg)
+![](..\img\OAuth2\1561023109(1).jpg)
 
 #### 3.2Implicit
 
 ​    这个是Authorization Code的简化版本。其中省略掉了颁发授权码（Authorization Code）给客户端的过程，而是直接返回访问令牌和可选的刷新令牌。其适用于没有Server服务器来接受处理Authorization Code的第三方应用，其流程如下：
 
-![](C:\Users\liurunze\Desktop\知识点\img\OAuth2\1561023326(1).jpg)
+![](..\img\OAuth2\1561023326(1).jpg)
 
 （1）Authorization Request
 
@@ -95,7 +95,7 @@ Access Token Response：
 
 示例：
 
-![](C:\Users\liurunze\Desktop\知识点\img\OAuth2\1561023517(1).jpg)
+![](..\img\OAuth2\1561023517(1).jpg)
 
 （2）Access Token Response
 
@@ -105,7 +105,7 @@ Access Token Response：
 
 示例：
 
-![](C:\Users\liurunze\Desktop\知识点\img\OAuth2\1561023581(1).jpg)
+![](..\img\OAuth2\1561023581(1).jpg)
 
 #### 3.3Resource Owner Password Credentials
 
@@ -113,7 +113,7 @@ Access Token Response：
 
 流程如下：
 
-![](C:\Users\liurunze\Desktop\知识点\img\OAuth2\1561339625(1).jpg)
+![](..\img\OAuth2\1561339625(1).jpg)
 
 （1）Client请求Authorization Server的参数：
 
@@ -124,13 +124,13 @@ Access Token Response：
 
 示例：
 
-![](C:\Users\liurunze\Desktop\知识点\img\OAuth2\1561340052(1).jpg)
+![](..\img\OAuth2\1561340052(1).jpg)
 
 #### 3.4Client Credentials Grant
 
 这种类型就更简化了，Client直接已自己的名义而不是Resource owner的名义去要求访问Resource server的一些受保护资源。流程如下：
 
-![](C:\Users\liurunze\Desktop\知识点\img\OAuth2\1561340246(1).jpg)
+![](..\img\OAuth2\1561340246(1).jpg)
 
 （1）Client请求Authorization Server的参数：
 
@@ -139,7 +139,7 @@ Access Token Response：
 
 示例：
 
-![](C:\Users\liurunze\Desktop\知识点\img\OAuth2\1561340324(1).jpg)
+![](..\img\OAuth2\1561340324(1).jpg)
 
 响应信息和3.1 Access Token Response保持一致。
 
@@ -152,7 +152,7 @@ Access Token Response：
 
 示例：
 
-![](C:\Users\liurunze\Desktop\知识点\img\OAuth2\1561340845(1).jpg)
+![](..\img\OAuth2\1561340845(1).jpg)
 
 响应信息和3.1 Access Token Response保持一致。
 
