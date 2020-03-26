@@ -2,7 +2,7 @@
 
 #### 1.爬取数据的流程
 
-![](..\img\Scrapy\scrapy的爬取流程.jpg)
+![](../img/Scrapy/scrapy的爬取流程.jpg)
 
 #### 2.项目实践
 

@@ -52,7 +52,7 @@ kafka是分布式消息队列。producer生产数据后按照topic归类放入ka
 
 #### 3. 基本架构图
 
-![](..\img\kafka\kafka基本架构图.jpg)
+![](../img/kafka/kafka基本架构图.jpg)
 
 - kafka集群是依赖zookeeper的
 - borker是kafka集群的单个实例
@@ -277,7 +277,7 @@ kafka是分布式消息队列。producer生产数据后按照topic归类放入ka
 
   - replica恢复
 
-    ![](..\img\kafka\replica恢复.png)
+    ![](../img/kafka/replica恢复.png)
 
     BrokerA恢复时，先将数据truncate到m1，然后去leader catch up数据，最后加入到ISR中。
     
@@ -338,7 +338,7 @@ kafka是分布式消息队列。producer生产数据后按照topic归类放入ka
 
 - **在zookeeper存储位置**：/brokers  /consumer
 
-  ![](..\img\kafka\zookeeper存储kafka元数据.png)
+  ![](../img/kafka/zookeeper存储kafka元数据.png)
 
 ##### 6.3消费数据
 
@@ -366,7 +366,7 @@ kafka是分布式消息队列。producer生产数据后按照topic归类放入ka
   2. 记C为消费者组中消费同一topic的消费者集合
   3. N=size(P)/size(C) 向上取整
   4. 解除Ci对原来分配的Partition的消费权
-  5. 将第i*N到（i+1）\*N-1个partition分配给Ci
+  5. 将第i*N到（i+1）/*N-1个partition分配给Ci
 
 #### 7.kafka API
 

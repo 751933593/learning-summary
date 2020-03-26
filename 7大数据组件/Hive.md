@@ -22,7 +22,7 @@
 
 ##### 1.3 架构原理
 
-![](..\img\Hive\Hive架构原理.jpg)
+![](../img/Hive/Hive架构原理.jpg)
 
 ##### 1.4 与数据库对比
 
@@ -73,7 +73,7 @@
    # 进入hive
    bin/hive
    # 创建表，以/t作为分隔符
-   hive> create table student(id int,name string) row fromat delimited fields terminated by '\t';
+   hive> create table student(id int,name string) row fromat delimited fields terminated by '/t';
    # 插入信息
    hive> insert into student values(1,"zhangsan");
    # 查询数据
@@ -173,7 +173,7 @@
   row format delimited fields terminated by ','
   collection items terminated by '_'
   map keys terminated by ':'
-  lines terminated by '\n';
+  lines terminated by '/n';
   ```
 
 - 类型转化
@@ -302,7 +302,7 @@
 
   ```sql
   create table if not exist table_name(id int,name string) r
-  row format delimited fields terminated by '\t'
+  row format delimited fields terminated by '/t'
   location '/user/hive/warehouse/XXX';
   ```
 
@@ -318,7 +318,7 @@
 
   ```sql
   insert overwrite|into [local] directory '本地路径或者hdfs路径' 
-  row format fields terminated by '\t'
+  row format fields terminated by '/t'
   select * from table_name;
   ```
 
@@ -368,7 +368,7 @@
     ```sql
     create table stu_bucket(id int, name string)
     clustered by(id) into 4 buckets
-    row format delimited fields terminated by '\t';
+    row format delimited fields terminated by '/t';
     ```
 
   - 设置属性

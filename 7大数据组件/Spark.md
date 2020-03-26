@@ -13,7 +13,7 @@
 
 - ApplicationMaster将RM与Driver解耦，Container将NM与Task解耦
 
-  ![](..\img\spark\yarn基本结构.png)
+  ![](../img/spark/yarn基本结构.png)
 
 #### 3.Spark的特点
 
@@ -23,7 +23,7 @@
 
 - 基本结构
 
-  ![](..\img\spark\spark基本结构.jpg)
+  ![](../img/spark/spark基本结构.jpg)
 
 #### 4.Local模式
 
@@ -43,11 +43,11 @@ Local模式就是运行在一台机器上的模式，用于练手和测试
 2. 官方求pi案例
 
    ```powershell
-   bin/spark-submit \
-   --class org.apache.spark.examples.SparkPi \
-   --executor-memory 1G \
-   --total-executor-cores 2 \
-   ./examples/jars/spark-examples_2.11-2.4.4.jar \
+   bin/spark-submit /
+   --class org.apache.spark.examples.SparkPi /
+   --executor-memory 1G /
+   --total-executor-cores 2 /
+   ./examples/jars/spark-examples_2.11-2.4.4.jar /
    100
    ```
 
@@ -183,8 +183,8 @@ Local模式就是运行在一台机器上的模式，用于练手和测试
      启动jar包
    
      ```powershell
-     bin/spark-submit \
-     --class com.capture.spark.WordCount \
+     bin/spark-submit /
+     --class com.capture.spark.WordCount /
      ./WordCount-jar-with-dependencies.jar
      ```
    
@@ -228,11 +228,11 @@ spark客户端直接连接yarn，不需要额外的构建spark集群。有yarn-c
 4. 执行PI测试程序，需要提前启动yarn集群和HDFS集群
 
    ```powershell
-   bin/spark-submit \
-   --class org.apache.spark.examples.SparkPi \
-   --master yarn \
-   --deploy-mode client \
-   ./examples/jars/spark-examples_2.11-2.4.4.jar \
+   bin/spark-submit /
+   --class org.apache.spark.examples.SparkPi /
+   --master yarn /
+   --deploy-mode client /
+   ./examples/jars/spark-examples_2.11-2.4.4.jar /
    100
    ```
 
@@ -255,11 +255,11 @@ spark客户端直接连接yarn，不需要额外的构建spark集群。有yarn-c
 3. 提交任务到yarn执行
 
    ```powershell
-   bin/spark-submit \
-   --class org.apache.spark.examples.SparkPi \
-   --master yarn \
-   --deploy-mode client \
-   ./examples/jars/spark-examples_2.11-2.4.4.jar \
+   bin/spark-submit /
+   --class org.apache.spark.examples.SparkPi /
+   --master yarn /
+   --deploy-mode client /
+   ./examples/jars/spark-examples_2.11-2.4.4.jar /
    100
    ```
 
@@ -273,7 +273,7 @@ spark客户端直接连接yarn，不需要额外的构建spark集群。有yarn-c
 
 ##### 5.4 Spark在Yarn上执行流程
 
-![](..\img\spark\spark在yarn上执行流程.jpg)
+![](../img/spark/spark在yarn上执行流程.jpg)
 
 #### 6.Standalone模式
 
@@ -281,7 +281,7 @@ spark客户端直接连接yarn，不需要额外的构建spark集群。有yarn-c
 
 构建一个有Master+Slave构成的Spark集群
 
-![](..\img\spark\standalone模式.jpg)
+![](../img/spark/standalone模式.jpg)
 
 ##### 6.2 安装与使用
 
@@ -319,12 +319,12 @@ spark客户端直接连接yarn，不需要额外的构建spark集群。有yarn-c
 5. 求PI测试
 
    ```shell
-   bin/spark-submit \
-   --class org.apache.spark.examples.SparkPi \
-   --master spark://node01:7077 \
-   --executor-memory 1G \
-   --total-executor-cores 2 \
-   ./examples/jars/spark-examples_2.11-2.4.4.jar \
+   bin/spark-submit /
+   --class org.apache.spark.examples.SparkPi /
+   --master spark://node01:7077 /
+   --executor-memory 1G /
+   --total-executor-cores 2 /
+   ./examples/jars/spark-examples_2.11-2.4.4.jar /
    100
    ```
 
@@ -1173,7 +1173,7 @@ RDD、广播变量、累加器
 </dependency>
 ```
 
-![](..\img\spark\SparkStreaming架构图.png)
+![](../img/spark/SparkStreaming架构图.png)
 
 - 计算WordCount
 
@@ -1400,7 +1400,7 @@ kafkaDStream.transform{
 
 ##### 11.3 Spark 任务调度机制
 
-![](..\img\spark\Spark任务调度图.jpg)
+![](../img/spark/Spark任务调度图.jpg)
 
 
 
