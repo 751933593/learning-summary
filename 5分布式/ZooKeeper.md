@@ -164,7 +164,7 @@ Znode包括两个**类型**：
 
 #### 5.1 Zab协议-广播
 
-![](img\Zookeeper\Zab协议-广播.png)
+![](..\img\Zookeeper\Zab协议-广播.png)
 
 #### 5.2 Zab协议-恢复模式
 

@@ -6,7 +6,7 @@
 
 #### 2.基础架构
 
-![](img\Flume\Flume组成架构图.jpg)
+![](..\img\Flume\Flume组成架构图.jpg)
 
 ##### 2.1 Agent
 
@@ -226,11 +226,11 @@ a1.sinks.k1.channel = c1
 
 #### 5.事务
 
-![](img\Flume\Flume事务.jpg)
+![](..\img\Flume\Flume事务.jpg)
 
 #### 6.Flume Agent内部原理
 
-![](img\Flume\FlumeAgent内部原理.jpg)
+![](..\img\Flume\FlumeAgent内部原理.jpg)
 
 - FailoverSinkProcessor 故障转移，即设置一个active和多个standby，如果active出了问题，则走standby
 
@@ -238,19 +238,19 @@ a1.sinks.k1.channel = c1
 
 ##### 7.1 简单串联
 
-![](img\Flume\FlumeAgent串联拓扑图.jpg)
+![](..\img\Flume\FlumeAgent串联拓扑图.jpg)
 
 ##### 7.2 复制和多路复用
 
-![](img\Flume\FlumeAgent多路复用拓扑图.jpg)
+![](..\img\Flume\FlumeAgent多路复用拓扑图.jpg)
 
 ##### 7.3 负载均衡和故障转移
 
-![](img\Flume\FlumeAgent负载均衡拓扑图.jpg)
+![](..\img\Flume\FlumeAgent负载均衡拓扑图.jpg)
 
 ##### 7.4 聚合
 
-![](img\Flume\FlumeAgent聚合拓扑图.jpg)
+![](..\img\Flume\FlumeAgent聚合拓扑图.jpg)
 
 #### 8.自定义Interceptor
 

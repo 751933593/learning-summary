@@ -91,6 +91,8 @@ git diff HEAD [版本号] file1
 git branch -v
 # 创建分支
 git branch branch_01
+# 删除本地分支
+git branch -D branch_01
 # 切换分支
 git checkout branch_01
 # 合并分支

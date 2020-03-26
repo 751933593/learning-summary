@@ -19,15 +19,15 @@
 
 ##### 1.3 逻辑结构
 
-<img src="img\HBase\HBase逻辑存储结构.jpg" style="zoom:80%;" />
+<img src="..\img\HBase\HBase逻辑存储结构.jpg" style="zoom:80%;" />
 
 ##### 1.4 物理结构
 
-<img src="img\HBase\HBASE物理存储结构.jpg" style="zoom:80%;" />
+<img src="..\img\HBase\HBASE物理存储结构.jpg" style="zoom:80%;" />
 
 ##### 1.5 基础架构
 
-<img src="img\HBase\基本架构.jpg" style="zoom:50%;" />
+<img src="..\img\HBase\基本架构.jpg" style="zoom:50%;" />
 
 - Master挂掉时，不会影响数据的读写
 - Master长期挂掉时，Region的split只能放在同一个RegionServer上
@@ -80,20 +80,20 @@
 
 #### 4.详细架构
 
-![](img\HBase\详细架构.jpg)
+![](..\img\HBase\详细架构.jpg)
 
 - client做DML操作可以直接向HRegionServer请求
 - client做DDL操作需要去HMaster
 
 ##### 4.1 写流程
 
-<img src="img\HBase\HBase写流程.jpg" style="zoom:67%;" />
+<img src="..\img\HBase\HBase写流程.jpg" style="zoom:67%;" />
 
 先放入wal内存，再放入MemStore内存，最后同步（持久化）wal，如果同步wal失败，则回滚，MemStore中的数据删掉
 
 meta表信息：
 
-![](img\HBase\zookeeper中meta表信息.jpg)
+![](..\img\HBase\zookeeper中meta表信息.jpg)
 
 ##### 4.2 MemStore Flush
 
@@ -117,7 +117,7 @@ Flush时，MemStore中的同一数据（不同版本），会删除老版本，H
 
 ##### 4.3 读流程
 
-![](img\HBase\HBase读流程.jpg)
+![](..\img\HBase\HBase读流程.jpg)
 
 ##### 4.4 StoreFile Compaction
 
