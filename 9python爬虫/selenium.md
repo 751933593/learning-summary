@@ -1,4 +1,4 @@
-### `selenium
+### selenium
 
 https://www.bilibili.com/video/av64421994
 
@@ -228,3 +228,36 @@ ac.move_to_element(
 | follow-sibling::p     | 选择后续兄弟节点所有某类型节点 | //div/follow-sibling::p    | 选择div标签的后续兄弟节点中的所有p标签 |
 | preceding-sibling::p  | 选择前面兄弟节点所有某类型节点 | //div/preceding-sibling::p | 选择div标签的前面兄弟节点中的所有p标签 |
 
+#### 1.2 反爬
+
+主要目的是将 window.navigator.webdriver 的值设为 undefined 
+
+ https://blog.csdn.net/pythonauto/java/article/details/104744743 
+
+ http://www.manongjc.com/detail/15-onthmcuyqexrmki.html 
+
+```python
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+def init_webdriver(self):
+    chrome_options = Options()
+    # chrome_options.add_argument('--headless')
+    # chrome_options.add_argument('--disable-gpu')
+    driver_path = self.settings["SELENIUM_DRIVER_CHROME_LOCALPATH"]
+    self.chromedriver = webdriver.Chrome(executable_path=driver_path, chrome_options=chrome_options)
+    self.chromedriver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+        "source": """
+                                 Object.defineProperty(navigator, 'webdriver', {
+                                   get: () => undefined
+                                 })
+                               """
+    })
+    self.chromedriver.implicitly_wait(10)
+```
+
+
+
+#### 1.3 谷歌浏览器驱动与浏览器版本照应
+
+https://blog.csdn.net/qq_41188944/article/details/79039690
