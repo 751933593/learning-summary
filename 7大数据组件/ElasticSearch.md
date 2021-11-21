@@ -378,7 +378,7 @@ GET index/_search
 
   - IT/IDF模型
 
-  - BM35模型（5.X之后）
+  - BM25模型（5.X之后）
 
 #### 9.集群
 
